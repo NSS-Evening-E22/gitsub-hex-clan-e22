@@ -19,3 +19,9 @@ footer li {
 svg {
   color: white;
 }
+
+.card {
+  background-color: black;
+  border: solid 1px white;
+  color:white;
+}
