@@ -2,6 +2,7 @@ const packages = [
 {
   name: "Docker",
   desciption: "A software platform used for building applications based on containers — small and lightweight execution environments."
+
 },
 {
   name: "ApacheMaven",
@@ -41,7 +42,7 @@ const cardsOnDom = (array) => {
     <div class="card-body">
       <h5 class="card-title">${package.name}</h5>
       <p class="card-text">${package.desciption}</p>
-      <a href="#" >Learn more</a>
+      <a href="https://docs.github.com/en/packages" >Learn more</a>
     </div>
   </div>`
   }

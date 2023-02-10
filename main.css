@@ -1,0 +1,15 @@
+body {background-color: black;
+color:white
+}
+
+.card {
+  background-color: black;
+  color: aliceblue;
+  border: solid 1px gray;
+}
+
+#package{
+  display: flex;
+  flex: wrap;
+  flex-wrap: wrap;
+}
