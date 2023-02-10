@@ -37,7 +37,7 @@ function renderRepoForm () {
     </div>
       
     <div class="col-12">
-      <button id="repoSubmitBtn" type="submit" class="btn btn-primary">Create Repository</button>
+      <button id="repoSubmitBtn" type="submit" class="btn btn-success">Create Repository</button>
     </div>
   </form>`
 };
@@ -56,8 +56,9 @@ function renderRepoCards(array) {
       <div class="card-body">
         <h5 class="card-title">${repoIndex.name}</h5>
         <p class="card-text">${repoIndex.description}</p>
-        <button class="btn btn-outline-danger" id="delete--${repoIndex.id}">Delete</button>
+        <button class="btn btn-outline-danger btn-sm" id="delete--${repoIndex.id}">Delete</button>
       </div>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end"><button type="button" class="btn btn-primary btn-sm" data-bs-toggle="button">Star</button></div>
     </div>`
 });
 
