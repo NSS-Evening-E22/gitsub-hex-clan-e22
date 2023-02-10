@@ -1,11 +1,10 @@
 console.log("hex clan group project")
 
 
+import { renderToDom } from "/utils/renderOnDOm.js";
+import { footer } from "/components/footer.js";
+import { navbar } from "/components/navbar.js";
 
-const renderToDom = (divId, htmlToRender) => {
-  const selectedDiv = document.querySelector(divId);
-  selectedDiv.innerHTML = htmlToRender;
-};
 
 /* const cardsOnDom = (array) => {
   let domString = ""
@@ -25,3 +24,11 @@ const renderToDom = (divId, htmlToRender) => {
   }
 }
 */
+
+// Always at bottom of page
+const showNavs = () => {
+  renderToDom("#navBar", navbar);
+  renderToDom("#footer", footer);
+};
+
+showNavs();
