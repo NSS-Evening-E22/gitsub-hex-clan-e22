@@ -1,3 +1,27 @@
+#icon-div {
+  display: flex;
+  justify-content: flex-start;
+}
+#icon-div p {
+  margin-right: 50px;
+}
+#mainCardBody {
+  display: flex;
+  justify-content: space-between; 
+}
+#cardBodyTop {
+  display: flex;
+  justify-content: space-between;
+}
+#repoFormDiv {
+  margin-top: 40px;
+}
+#repoCards {
+  margin-top: 40px;
+}
+#repoCard {
+  margin-top: 10px;
+}  
 body {
   background-color: black;
 }
