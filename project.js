@@ -32,7 +32,7 @@ const createTableEntry = (array) => {
     <tr>
           <td>${item.name}</td>
           <td>${item.content}</td>
-          <td><button id="delete--${item.id}" class="btn btn-sm btn-danger">X</button>
+          <td><button id="delete--${item.id}" class="btn btn-sm btn-dark">Remove</button>
         </tr>`;
     }
   });
@@ -69,6 +69,7 @@ const getFromLocalStorage = () => {
   }
 };
 
+//  ### Allow sorting of project list
 const sorting = () => {
   const sortName = document.querySelector("#sortName");
 
@@ -79,6 +80,14 @@ const sorting = () => {
     createTableEntry(projectList);
   });
 };
+
+// ### Show Hide Form
+const newProjectButton = document.querySelector("#newProjectButton");
+// *** A way to toggle a class on and off on an element ***
+newProjectButton.addEventListener("click", () => {
+  const toggleShow = document.querySelector(".hideForm");
+  toggleShow.classList.toggle("showForm");
+});
 
 sorting();
 getFromLocalStorage();

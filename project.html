@@ -24,19 +24,21 @@
             id="projectCards"
             class="d-flex justify-content-center align-items-center p-4"
           >
-            <div>
+            <div class="d-flex flex-column m-4 p-5">
+              <h2>Welcome to the all-new projects</h2>
               <p>
-                Welcome to the all-new projects Built like a spreadsheet,
-                project tables give you a live canvas to filter, sort, and group
-                issues and pull requests. Tailor them to your needs with custom
-                fields and saved views.
+                Built like a spreadsheet, project tables give you a live canvas
+                to filter, sort, and group issues and pull requests. Tailor them
+                to your needs with custom fields and saved views.
               </p>
-              <button class="btn btn-dark align-self-end">New Project</button>
+              <button id="newProjectButton" class="btn btn-dark align-self-end">
+                New Project
+              </button>
             </div>
             <img src="/images/kanban.jpg" alt="kanban board image" />
           </div>
           <div id="formDiv">
-            <form id="projectForm">
+            <form id="projectForm" class="hideForm">
               <div class="mb-3">
                 <label for="projectName" class="form-label">Project Name</label>
                 <input
@@ -57,12 +59,12 @@
 
               <button id="projectSubmit" class="btn btn-dark">Create</button>
             </form>
-            <table id="projectListTable" class="table mt-5">
+            <table id="projectListTable" class="table table-dark mt-5">
               <thead>
                 <tr>
                   <th scope="col" id="sortName">Name</th>
                   <th scope="col">Description</th>
-                  <th scope="col">Remove</th>
+                  <th scope="col">Remove Project</th>
                 </tr>
               </thead>
               <tbody id="tableBody"></tbody>
