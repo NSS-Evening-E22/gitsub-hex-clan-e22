@@ -1,6 +1,7 @@
-
-body {background-color: black;
-color:white; }
+body {
+  background-color: black;
+  color: white;
+}
 
 #icon-div {
   display: flex;
@@ -11,7 +12,7 @@ color:white; }
 }
 #mainCardBody {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 #cardBodyTop {
   display: flex;
@@ -25,11 +26,11 @@ color:white; }
 }
 #repoCard {
   margin-top: 10px;
-}  
+}
 
-
-body {background-color: black;
-color:white
+body {
+  background-color: black;
+  color: white;
 }
 
 .card {
@@ -38,7 +39,7 @@ color:white
   border: solid 1px gray;
 }
 
-#package{
+#package {
   display: flex;
   flex: wrap;
   flex-wrap: wrap;
@@ -48,6 +49,33 @@ color:white
   width: 80%;
   margin: 0 auto;
 }
+
+svg {
+  color: white;
+}
+#projectCards img {
+  width: 350px;
+  height: 200px;
+  opacity: 0.5;
+}
+#projectCards p {
+  padding: 2em;
+}
+#projectCards button {
+  align-self: end;
+}
+
+/*** Toggle FORM  ***/
+.hideForm {
+  display: none;
+}
+.showForm {
+  display: block;
+}
+#sortButton {
+  padding: 0 0.5em;
+}
+/* Footer */
 footer {
   color: white;
   width: 100%;
@@ -59,7 +87,9 @@ footer li {
   list-style: none;
   font-size: 0.75em;
 }
-svg {
+
+table th,
+table tr {
   color: white;
 }
 
@@ -69,24 +99,23 @@ svg {
   border: solid 1px gray;
 }
 
-#package{
+#package {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  
 }
 
-.btn{
+.btn {
   background-color: rgb(61, 60, 60);
   color: white;
 }
 
-.package-search-form{
-  width:75% 
+.package-search-form {
+  width: 75%;
 }
-.New-package-form{
-  width:75% 
+.New-package-form {
+  width: 75%;
 }
-.package-form-label{
-  width:75%
+.package-form-label {
+  width: 75%;
 }
