@@ -97,6 +97,46 @@ a {
 .btn-success {
   margin-top: 15px;
   background-color: #238636;
+  background-color: black;
+  color: white;
+}
+
+#icon-div {
+  display: flex;
+  justify-content: flex-start;
+}
+#icon-div p {
+  margin-right: 50px;
+}
+#mainCardBody {
+  display: flex;
+  justify-content: space-between;
+}
+#cardBodyTop {
+  display: flex;
+  justify-content: space-between;
+}
+#repoFormDiv {
+  margin-top: 40px;
+}
+#repoCards {
+  margin-top: 40px;
+}
+#repoCard {
+  margin-top: 10px;
+}
+
+
+.card {
+  background-color: black;
+  color: aliceblue;
+  border: solid 1px gray;
+}
+
+#package {
+  display: flex;
+  flex: wrap;
+  flex-wrap: wrap;
 }
 
 .wrapper {
@@ -104,6 +144,32 @@ a {
   margin: 0 auto;
 }
 
+svg {
+  color: white;
+}
+#projectCards img {
+  width: 350px;
+  height: 200px;
+  opacity: 0.5;
+}
+#projectCards p {
+  padding: 2em;
+}
+#projectCards button {
+  align-self: end;
+}
+
+/*** Toggle FORM  ***/
+.hideForm {
+  display: none;
+}
+.showForm {
+  display: block;
+}
+#sortButton {
+  padding: 0 0.5em;
+}
+/* Footer */
 footer {
   color: white;
   width: 100%;
@@ -116,6 +182,34 @@ footer li {
   font-size: 0.75em;
 }
 
-svg {
+table th,
+table tr {
   color: white;
+}
+
+.card {
+  background-color: black;
+  color: aliceblue;
+  border: solid 1px gray;
+}
+
+#package {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btn {
+  background-color: rgb(61, 60, 60);
+  color: white;
+}
+
+.package-search-form {
+  width: 75%;
+}
+.New-package-form {
+  width: 75%;
+}
+.package-form-label {
+  width: 75%;
 }
