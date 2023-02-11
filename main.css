@@ -18,6 +18,7 @@ body {
   background-color: #0d1117;
   display: flex;
   flex-flow: row wrap;
+  gap: 10px;
 }
 
 .javaScript-color {
@@ -41,8 +42,27 @@ body {
   padding-bottom: 20px;
 }
 
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
 .form-control {
   background-color: #0a0d13;
+}
+
+#inputProjectBoardName {
+  background-color: #0a0d13;
+  color: #c9d1d9;
+}
+
+#exampleFormControlTextarea1 {
+  background-color: #0a0d13;
+  color: #c9d1d9;
+}
+
+a {
+  text-decoration: none;
 }
 
 .gray {
