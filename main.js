@@ -1,4 +1,11 @@
-console.log("hex clan group project")
+import { renderToDom } from "/utils/renderOnDOm.js";
+import { footer } from "/components/footer.js";
+import { navbar } from "/components/navbar.js";
+
+const showNavs = () => {
+  renderToDom("#navBar", navbar);
+  renderToDom("#footer", footer);
+};
 
 //variable to house repo data objects
 const reposArr = [];
@@ -131,3 +138,7 @@ const removeRepo = (event) => {
 document.querySelector("#repoSubmitBtn").addEventListener("click", addRepo);
 document.querySelector("#searchInput").addEventListener("keyup", search);
 document.querySelector("#repoCards").addEventListener("click", removeRepo);
+
+
+
+showNavs();
