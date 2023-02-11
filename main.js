@@ -115,6 +115,19 @@ const search = (event) => {
     renderRepoCards(searchResult);
 };
 
+//delete added repo function
+const removeRepo = (event) => {
+  if (event.target.id.includes("delete")) {
+    const [, id] = event.target.id.split("--");
+    const indexOfRepo = reposArr.findIndex(
+      (repo) => repo.id === Number(id)
+    );
+    reposArr.splice(indexOfRepo, 1);
+    renderRepoCards(reposArr);
+  }
+};
+
 //event listeners section
 document.querySelector("#repoSubmitBtn").addEventListener("click", addRepo);
 document.querySelector("#searchInput").addEventListener("keyup", search);
+document.querySelector("#repoCards").addEventListener("click", removeRepo);

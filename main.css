@@ -13,3 +13,12 @@
   display: flex;
   justify-content: space-between;
 }
+#repoFormDiv {
+  margin-top: 40px;
+}
+#repoCards {
+  margin-top: 40px;
+}
+#repoCard {
+  margin-top: 10px;
+}
