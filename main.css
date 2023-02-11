@@ -18,3 +18,13 @@ color:white
   background-color: rgb(61, 60, 60);
   color: white;
 }
+
+.package-search-form{
+  width:75% 
+}
+.New-package-form{
+  width:75% 
+}
+.package-form-label{
+  width:75%
+}

@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="packages.html">
+    <link rel="stylesheet" href="package.html">
   </head>
   <body>
     <div class="wrapper d-flex flex-column">
@@ -23,6 +23,26 @@
           <nav id="navBar"></nav>
           <div id="cards"></div>
           <div id="formDiv"></div>
+          <h1>Get Started with GitHub Packages</h1>
+          <p>Safely publish packages, store your packages alongside your code, and share your packages privately with your team.</p>
+          <p>Choose a registry</p>
+          <div class="package-search-form">
+            <input type="text" class="form-control" id="searchInput" placeholder="SEARCH">
+            <label for="searchInput">Search</label>
+          </div>
+         <div id="package"></div>
+         <form>
+         <div class="New-package-form">
+          <label for="exampleFormControlInput1" class="form-label">New Package</label>
+          <input type="email" class="form-control" id="name" placeholder="Package Name">
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+          <textarea class="form-control" id="description" rows="3"></textarea>
+          <button type="submit" class="btn" id="form-submit">
+            Add package
+          </button>
+        </div>
+        </form>
         </div>
         </div>
       </div>

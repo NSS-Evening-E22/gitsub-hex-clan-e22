@@ -99,3 +99,17 @@ const submitButton = document.querySelector("#form-submit");
 submitButton.addEventListener('click',addNewPackage);
 cardsOnDom(packages)
 //===================
+
+//======DELETE PACKAGE======
+const appDiv = document.querySelector("#package");
+appDiv.addEventListener('click', (event) => {
+if(event.target.id.includes('delete')) {
+const [throwaway, packageId] = event.target.id.split("--");
+const indexOfPackages = packages.findIndex((event) => event.id === Number(packageId)
+); 
+
+packages.splice(indexOfPackages, 1);
+}
+cardsOnDom(packages)
+});
+//===================
