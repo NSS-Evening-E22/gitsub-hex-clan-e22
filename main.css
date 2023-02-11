@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-.rounded-circle{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 10px;
-  }
-=======
+.rounded-circle {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 90px;
+  padding: 1em;
+}
 body {
   background-color: black;
 }
@@ -27,4 +26,39 @@ footer li {
 svg {
   color: white;
 }
->>>>>>> main
+
+#profile {
+  color: white;
+}
+.svg-icons {
+  fill: currentColor;
+  color: whitesmoke;
+}
+.heart-icon {
+  fill: currentColor;
+  color: rgb(255, 99, 154);
+}
+
+.list-group {
+  background-color: black;
+  color: white;
+}
+
+.list-styled {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.list-styled > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 5px;
+}
+
+#sponsor-icon{
+  width: 32px;
+  height: 32px;
+  border-radius: 22px;
+}
