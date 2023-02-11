@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  color: white;
 }
 .wrapper {
   width: 80%;
@@ -18,4 +19,26 @@ footer li {
 }
 svg {
   color: white;
+}
+#projectCards img {
+  width: 350px;
+  height: 200px;
+  opacity: 0.5;
+}
+#projectCards p {
+  padding: 2em;
+}
+#projectCards button {
+  align-self: end;
+}
+
+/*** Toggle FORM  ***/
+.hideForm {
+  display: none;
+}
+.showForm {
+  display: block;
+}
+#sortButton {
+  padding: 0 0.5em;
 }
