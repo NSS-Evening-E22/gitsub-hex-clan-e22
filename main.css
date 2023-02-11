@@ -11,6 +11,7 @@ body {
 .card {
   display: flex;
   flex-flow: row wrap;
+  border: 1px solid #272d32;
 }
 
 .card-body {
@@ -22,7 +23,7 @@ body {
 }
 
 .javaScript-color {
-  color: yellow;
+  color: #f1e15c;
 }
 
 .font-24 {
@@ -49,6 +50,7 @@ body {
 
 .form-control {
   background-color: #0a0d13;
+  border: 1px solid #272d32;
 }
 
 #inputProjectBoardName {
@@ -63,6 +65,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #59a6ff;
 }
 
 .gray {
