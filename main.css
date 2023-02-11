@@ -13,3 +13,8 @@ color:white
   flex: wrap;
   flex-wrap: wrap;
 }
+
+.btn{
+  background-color: rgb(61, 60, 60);
+  color: white;
+}

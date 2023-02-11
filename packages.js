@@ -42,7 +42,7 @@ const cardsOnDom = (array) => {
     <div class="card-body">
       <h5 class="card-title">${package.name}</h5>
       <p class="card-text">${package.desciption}</p>
-      <a href="https://docs.github.com/en/packages" >Learn more</a>
+      <a class="btn" href="https://docs.github.com/en/packages" role ="button" >Learn more</a>
     </div>
   </div>`
   }
@@ -55,3 +55,15 @@ const cardsOnDom = (array) => {
 
  }
  startApp();
+
+ const search = (event) => {
+  const userInput = event.target.value.toLowerCase();
+  console.log(userInput);
+  const searchResult = packages.filter(index => 
+   index.name.toLowerCase().includes(userInput) ||
+    index.desciption.toLowerCase().includes(userInput) 
+ )
+   cardsOnDom(searchResult);
+  }
+ 
+  document.querySelector('#searchInput').addEventListener('keyup', search)
