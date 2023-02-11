@@ -22,9 +22,18 @@ body {
   gap: 10px;
 }
 
-.javaScript-color {
+.language-HTML {
+  color: #e44f26;
+}
+
+.language-CSS {
+  color: #1572b6;
+}
+
+.language-JavaScript {
   color: #f1e15c;
 }
+
 
 .font-24 {
   font-size: 24px;
@@ -61,6 +70,12 @@ body {
 #exampleFormControlTextarea1 {
   background-color: #0a0d13;
   color: #c9d1d9;
+}
+
+.bgAndColorChange1 {
+  background-color: #0a0d13;
+  color: gray;
+  border: 1px solid #272d32;
 }
 
 a {
