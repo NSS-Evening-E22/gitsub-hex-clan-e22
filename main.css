@@ -34,7 +34,6 @@ body {
   color: #f1e15c;
 }
 
-
 .font-24 {
   font-size: 24px;
 }
@@ -45,6 +44,14 @@ body {
 
 .marginTop-10 {
   margin: 10px 0 0 0;
+}
+
+.card-text {
+  word-break: break-all;
+}
+
+.breakText {
+  word-break: break-all;
 }
 
 .borderBottom {
