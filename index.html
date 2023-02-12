@@ -16,11 +16,11 @@
   <body>
     <div class="wrapper d-flex flex-column">
       <div class="mainWrapper d-flex gap-4">
-        <div id="profile"></div>
+        <div id="profile" class="card-profile" style="width: 18rem"></div>
         <div class="contentWrapper">
           <nav id="navBar" class="navbar navbar-dark"></nav>
           <p id="pinned-text">Pinned</p>
-          <div id="cards" class="d-flex flex-wrap gap-3"></div>
+          <div id="cards" class="d-flex flex-wrap gap-3 p-3"></div>
 
           <div id="formDiv">
             <p class="font-24 marginTop-20">Create a new pinned</p>
@@ -76,5 +76,6 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="main.js"></script>
+    <script type="module" src="/components/profile.js"></script>
   </body>
 </html>
