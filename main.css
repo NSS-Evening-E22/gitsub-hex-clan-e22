@@ -94,11 +94,10 @@ a {
   color: gray;
 }
 
-.btn-success {
+#createBtn {
   margin-top: 15px;
-  background-color: #238636;
-  background-color: black;
   color: white;
+  background-color: #238636;
 }
 
 #icon-div {

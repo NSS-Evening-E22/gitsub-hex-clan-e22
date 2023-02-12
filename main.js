@@ -90,6 +90,8 @@ const showNavs = () => {
   renderToDom("#footer", footer);
 };
 
+showNavs();
+
 //variable to house repo data objects
 const reposArr = [];
 
@@ -221,7 +223,3 @@ const removeRepo = (event) => {
 document.querySelector("#repoSubmitBtn").addEventListener("click", addRepo);
 document.querySelector("#searchInput").addEventListener("keyup", search);
 document.querySelector("#repoCards").addEventListener("click", removeRepo);
-
-
-
-showNavs();

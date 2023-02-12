@@ -1,5 +1,5 @@
 export const navbar = `<div class="container-fluid">
-<a class="navbar-brand" href="#">
+<a class="navbar-brand" href="/index.html">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
@@ -13,7 +13,7 @@ export const navbar = `<div class="container-fluid">
   </svg>
   Overview
 </a>
-<a class="navbar-brand" href="#">
+<a class="navbar-brand" href="/repo.html">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
@@ -28,7 +28,7 @@ export const navbar = `<div class="container-fluid">
 
   Repositories
 </a>
-<a class="navbar-brand" href="#">
+<a class="navbar-brand" href="/project.html">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
@@ -42,7 +42,7 @@ export const navbar = `<div class="container-fluid">
   </svg>
   Projects
 </a>
-<a class="navbar-brand" href="#">
+<a class="navbar-brand" href="/packages.html">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
