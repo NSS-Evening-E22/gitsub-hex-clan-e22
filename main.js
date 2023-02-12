@@ -1,35 +1,32 @@
-console.log("hex clan group project")
+import { renderToDom } from "/utils/renderOnDOm.js";
+import { footer } from "/components/footer.js";
+import { navbar } from "/components/navbar.js";
 
 const pinned = [
   {
     name: "gatsby-workshop",
     language: "JavaScript",
-    discription: "This workshop covers the fundamentals of developing fast, accessible sites with Gatsby, a React framework, and dive deep into the building blocks you'll need to build your own custon Gatsby sites."
+    discription:
+      "This workshop covers the fundamentals of developing fast, accessible sites with Gatsby, a React framework, and dive deep into the building blocks you'll need to build your own custon Gatsby sites.",
   },
   {
     name: "React-Ladies",
     language: "HTML",
-    discription: "We're a group of women and non-binary React.Js enthusiasts in New York city (and beyond)."
+    discription:
+      "We're a group of women and non-binary React.Js enthusiasts in New York city (and beyond).",
   },
   {
     name: "getting-started-with-open-source",
     language: "CSS",
-    discription: "This is a presentation on Getting Started With Open Source"
-  }
+    discription: "This is a presentation on Getting Started With Open Source",
+  },
 ];
 
-
-import { renderToDom } from "/utils/renderOnDOm.js";
-import { footer } from "/components/footer.js";
-import { navbar } from "/components/navbar.js";
-
-
 //renders cards onto page
- const cardsOnDom = (array) => {
-  let domString = ""
+const cardsOnDom = (array) => {
+  let domString = "";
   for (const pinned of array) {
-    domString +=
-    `<div class="card" style="width: 18rem;">
+    domString += `<div class="card" style="width: 18rem;">
       <div class="card-body">
         <div class="flexRow">
           <h5 class="card-title"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg> <a href="url" class="breakText">${pinned.name}</a></h5>
@@ -43,46 +40,36 @@ import { navbar } from "/components/navbar.js";
           <p class="card-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M15 3a3 3 0 0 1-5.175 2.066l-3.92 2.179a2.994 2.994 0 0 1 0 1.51l3.92 2.179a3 3 0 1 1-.73 1.31l-3.92-2.178a3 3 0 1 1 0-4.133l3.92-2.178A3 3 0 1 1 15 3Zm-1.5 10a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 13.5 13Zm-9-5a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 4.5 8Zm9-5a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 13.5 3Z"></path></svg> 36</p>
         </div>
       </div>
-    </div>`
+    </div>`;
   }
   renderToDom("#cards", domString);
-}
+};
 
 //create new pinned
 
 const createPinned = (event) => {
   event.preventDefault();
 
-  let name = document.querySelector('#inputProjectBoardName');
+  let name = document.querySelector("#inputProjectBoardName");
   console.log(name.toString());
-  name = name.value.toString().replace(/\s+/g, '-');
-  const discription = document.querySelector('#exampleFormControlTextarea1');
+  name = name.value.toString().replace(/\s+/g, "-");
+  const discription = document.querySelector("#exampleFormControlTextarea1");
 
   const newPinned = {
     name: name,
     discription: discription.value,
-    language: document.querySelector('#language').value
+    language: document.querySelector("#language").value,
   };
 
   pinned.push(newPinned);
   cardsOnDom(pinned);
-  document.querySelector('#inputProjectBoardName').value = '';
-  document.querySelector('#language').value = '';
-  document.querySelector('#exampleFormControlTextarea1').value = '';
+  document.querySelector("#inputProjectBoardName").value = "";
+  document.querySelector("#language").value = "";
+  document.querySelector("#exampleFormControlTextarea1").value = "";
 };
 
-
-
-const createBtn = document.querySelector('#createBtn');
-createBtn.addEventListener('click', createPinned);
-
-
-
-const startApp = () => {
-  cardsOnDom(pinned);
-};
-
-startApp();
+const createBtn = document.querySelector("#createBtn");
+createBtn.addEventListener("click", createPinned);
 
 // Always at bottom of page
 const showNavs = () => {
@@ -94,27 +81,24 @@ const showNavs = () => {
 const reposArr = [];
 
 //render search bar to Dom
-function renderSearchInput () {
+function renderSearchInput() {
   //get DOM elements
   const searchDiv = document.querySelector("#searchBar");
-  searchDiv.innerHTML =
-    `<div id="search">
+  searchDiv.innerHTML = `<div id="search">
     <div class="form-floating mb-3">
       <input type="text" class="form-control" id="searchInput" placeholder="Search Repositories">
       <label for="searchInput">Find a Repository</label>
     </div>
-  </div>`
-};
+  </div>`;
+}
 renderSearchInput();
 
 //render repo form to DOM
-function renderRepoForm () {
-
+function renderRepoForm() {
   //get DOM elements
   const repoAddDiv = document.querySelector("#repoFormDiv");
 
-  repoAddDiv.innerHTML = 
-    `<form id="repoform" class="row g-3">
+  repoAddDiv.innerHTML = `<form id="repoform" class="row g-3">
     <div class="col-12">
       <label for="repoName" class="form-label">Repository Name<span id="required">*</span></label>
       <input type="text" class="form-control" id="inputName">
@@ -129,20 +113,18 @@ function renderRepoForm () {
     <div class="col-12">
       <button id="repoSubmitBtn" type="submit" class="btn btn-success">Create Repository</button>
     </div>
-  </form>`
-};
+  </form>`;
+}
 
-renderRepoForm()
+renderRepoForm();
 
 //render repositories to repository Div
 function renderRepoCards(array) {
- 
   const repoCardDiv = document.querySelector("#repoCards");
   let cardHtml = "";
 
   array.forEach((repoIndex) => {
-    cardHtml +=
-    `<div id="repoCard" class="card" style="width: 50rem;">
+    cardHtml += `<div id="repoCard" class="card" style="width: 50rem;">
       <div class="mainCardBody">
         <div class="card-body">
 
@@ -167,51 +149,47 @@ function renderRepoCards(array) {
         <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16ZM6 6.928a1.75 1.75 0 1 0-1 0V7.5A1.5 1.5 0 0 0 6.5 9h1v1.072a1.75 1.75 0 1 0 1 0V9h1A1.5 1.5 0 0 0 11 7.5v-.572a1.75 1.75 0 1 0-1 0V7.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5Z"></path></svg> 33</p>
       </div>
 
-    </div>`
-});
+    </div>`;
+  });
 
   repoCardDiv.innerHTML = cardHtml;
-};
-
-
-
+}
 
 //add repo card function
-const formEl = document.querySelector("#repoform")
+const formEl = document.querySelector("#repoform");
 
-function addRepo (event) {
+function addRepo(event) {
   event.preventDefault();
-    
+
   const newRepoObj = {
     name: document.querySelector("#inputName").value,
     description: document.querySelector("#descInput").value,
-    id: reposArr.length +1
+    id: reposArr.length + 1,
   };
 
   reposArr.push(newRepoObj);
   renderRepoCards(reposArr);
-  console.log(reposArr)
-  formEl.reset()
-};
+  console.log(reposArr);
+  formEl.reset();
+}
 
 //add search function function
 const search = (event) => {
   const userInput = event.target.value.toLowerCase();
-  const searchResult = reposArr.filter(repoIndex =>
-    repoIndex.name.toLowerCase().includes(userInput)||
-    repoIndex.description.toLowerCase().includes(userInput)
-    );
-    
-    renderRepoCards(searchResult);
+  const searchResult = reposArr.filter(
+    (repoIndex) =>
+      repoIndex.name.toLowerCase().includes(userInput) ||
+      repoIndex.description.toLowerCase().includes(userInput)
+  );
+
+  renderRepoCards(searchResult);
 };
 
 //delete added repo function
 const removeRepo = (event) => {
   if (event.target.id.includes("delete")) {
     const [, id] = event.target.id.split("--");
-    const indexOfRepo = reposArr.findIndex(
-      (repo) => repo.id === Number(id)
-    );
+    const indexOfRepo = reposArr.findIndex((repo) => repo.id === Number(id));
     reposArr.splice(indexOfRepo, 1);
     renderRepoCards(reposArr);
   }
@@ -222,6 +200,9 @@ document.querySelector("#repoSubmitBtn").addEventListener("click", addRepo);
 document.querySelector("#searchInput").addEventListener("keyup", search);
 document.querySelector("#repoCards").addEventListener("click", removeRepo);
 
+const startApp = () => {
+  showNavs();
+  cardsOnDom(pinned);
+};
 
-
-showNavs();
+startApp();
