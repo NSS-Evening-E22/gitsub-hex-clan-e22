@@ -16,16 +16,16 @@
   </head>
   <body>
     <div class="wrapper d-flex flex-column">
-      <div class="mainWrapper d-flex gap-4">
-        <div id="profile"></div>
-        <div class="contentWrapper">
-          <nav id="navBar" class="navbar navbar-dark"></nav>
+      <div class="mainWrapper d-flex gap-5">
+        <div id="profile" class="card-profile" style="width: 15em"></div>
+        <div class="contentWrapper p-3">
+          <nav id="navBar" class="navbar-dark"></nav>
           <div
             id="projectCards"
             class="d-flex justify-content-center align-items-center p-4"
           >
-            <div class="d-flex flex-column m-4 p-5">
-              <h2>Welcome to the all-new projects</h2>
+            <div class="d-flex flex-column m-3 p-3">
+              <h3>Projects</h3>
               <p>
                 Built like a spreadsheet, project tables give you a live canvas
                 to filter, sort, and group issues and pull requests. Tailor them
@@ -81,5 +81,6 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="main.js"></script>
+    <script type="module" src="/components/profile.js"></script>
   </body>
 </html>

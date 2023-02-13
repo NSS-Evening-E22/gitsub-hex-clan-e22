@@ -1,13 +1,24 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   color: #c9d1d9;
   background-color: #0d1117;
 }
-
-#pinned-text {
-  font-size: 18px;
+#navBar a {
+  color: white;
 }
-
+#navBar a:hover {
+  color: white;
+  text-decoration: underline;
+}
+#pinned-text {
+  font-size: 2em;
+  margin: 1.5em 0.5em 0 0.5em;
+}
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
 .card {
   display: flex;
   flex-flow: row wrap;
@@ -112,6 +123,7 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
 #cardBodyTop {
   display: flex;
   justify-content: space-between;
@@ -132,17 +144,19 @@ a {
   border: solid 1px gray;
 }
 
+.packagesHead {
+  margin: 1.5em;
+}
 #package {
   display: flex;
-  flex: wrap;
+  /* flex: wrap; */
   flex-wrap: wrap;
+  width: 100%;
+  padding: 2em;
 }
-
-.wrapper {
-  width: 80%;
-  margin: 0 auto;
+#formDiv {
+  margin: 1.5em;
 }
-
 svg {
   color: white;
 }
@@ -180,17 +194,22 @@ footer li {
   list-style: none;
   font-size: 0.75em;
 }
+#projectListTable,
+#projectForm {
+  width: 80%;
+  margin: 0 auto;
+}
 
 table th,
 table tr {
   color: white;
 }
 
-.card {
+/* .card {
   background-color: black;
   color: aliceblue;
   border: solid 1px gray;
-}
+} */
 
 #package {
   display: flex;
@@ -211,4 +230,51 @@ table tr {
 }
 .package-form-label {
   width: 75%;
+}
+/* PROFILE */
+.rounded-circle {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 90px;
+  padding: 1em;
+}
+#profile {
+  color: white;
+}
+.svg-icons {
+  fill: currentColor;
+  color: whitesmoke;
+}
+.heart-icon {
+  fill: currentColor;
+  color: rgb(255, 99, 154);
+}
+
+.list-group {
+  background-color: black;
+  color: white;
+}
+
+.list-styled {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.list-styled > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 5px;
+}
+
+#sponsor-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 22px;
+}
+.repoHead,
+#searchBar {
+  margin-top: 2em;
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,18 +16,17 @@
   <body>
     <div class="wrapper d-flex flex-column">
       <div class="mainWrapper d-flex gap-4">
-        <div id="profile"></div>
-        <div class="contentWrapper">
-          <nav id="navBar"></nav>
-
-          <div id="searchBar"></div>  
+        <div id="profile" class="card-profile" style="width: 18rem"></div>
+        <div class="contentWrapper p-3">
+          <nav id="navBar" class="navbar-dark"></nav>
+          <div class="repoHead"><h3>Repositories</h3></div>
+          <div id="searchBar"></div>
 
           <div id="repoCards"></div>
 
           <div id="repoFormDiv"></div>
-
+        </div>
       </div>
-
       <footer id="footer" class="align-self-end"></footer>
     </div>
     <script
@@ -37,6 +35,7 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="main.js"></script>
+    <script type="module" src="/components/profile.js"></script>
+    <script src="repos.js"></script>
   </body>
-
 </html>

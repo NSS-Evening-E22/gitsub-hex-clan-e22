@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,37 +12,59 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="package.html">
   </head>
   <body>
     <div class="wrapper d-flex flex-column">
       <div class="mainWrapper d-flex gap-4">
-        <div id="profile"></div>
-        <div class="contentWrapper">
-          <nav id="navBar"></nav>
-          <div id="cards"></div>
-          <div id="formDiv"></div>
-          <h1>Get Started with GitHub Packages</h1>
-          <p>Safely publish packages, store your packages alongside your code, and share your packages privately with your team.</p>
-          <p>Choose a registry</p>
-          <div class="package-search-form">
-            <input type="text" class="form-control" id="searchInput" placeholder="SEARCH">
-            <label for="searchInput">Search</label>
+        <div id="profile" class="card-profile" style="width: 18rem"></div>
+        <div class="contentWrapper p-3">
+          <nav id="navBar" class="navbar-dark"></nav>
+          <div class="packagesHead">
+            <h1>Get Started with GitHub Packages</h1>
+            <p>
+              Safely publish packages, store your packages alongside your code,
+              and share your packages privately with your team.
+            </p>
+            <p>Choose a registry</p>
+            <div class="package-search-form">
+              <input
+                type="text"
+                class="form-control"
+                id="searchInput"
+                placeholder="SEARCH"
+              />
+              <label for="searchInput">Search</label>
+            </div>
           </div>
-         <div id="package"></div>
-         <form>
-         <div class="New-package-form">
-          <label for="exampleFormControlInput1" class="form-label">New Package</label>
-          <input type="email" class="form-control" id="name" placeholder="Package Name">
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-          <textarea class="form-control" id="description" rows="3"></textarea>
-          <button type="submit" class="btn" id="form-submit">
-            Add package
-          </button>
-        </div>
-        </form>
-        </div>
+          <div id="package"></div>
+          <div id="formDiv">
+            <!-- <form> -->
+            <div class="New-package-form">
+              <label for="exampleFormControlInput1" class="form-label"
+                >New Package</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="name"
+                placeholder="Package Name"
+              />
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="description"
+                  rows="3"
+                ></textarea>
+                <button type="submit" class="btn" id="form-submit">
+                  Add package
+                </button>
+              </div>
+              <!-- </form> -->
+            </div>
+          </div>
         </div>
       </div>
       <footer id="footer" class="align-self-end"></footer>
@@ -53,8 +74,9 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="main.js"></script>
-    <script src="packages.js"></script>
-  </body>
 
+    <script src="packages.js"></script>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="/components/profile.js"></script>
+  </body>
 </html>
