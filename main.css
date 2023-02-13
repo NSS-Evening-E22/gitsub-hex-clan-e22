@@ -12,7 +12,8 @@ body {
   text-decoration: underline;
 }
 #pinned-text {
-  font-size: 18px;
+  font-size: 2em;
+  margin: 1.5em 0.5em 0 0.5em;
 }
 .wrapper {
   width: 80%;
@@ -272,4 +273,8 @@ table tr {
   width: 32px;
   height: 32px;
   border-radius: 22px;
+}
+.repoHead,
+#searchBar {
+  margin-top: 2em;
 }

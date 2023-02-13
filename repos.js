@@ -1,11 +1,4 @@
-import { renderToDom } from "/utils/renderOnDOm.js";
-import { footer } from "/components/footer.js";
-import { navbar } from "/components/navbar.js";
-
-const showNavs = () => {
-  renderToDom("#navBar", navbar);
-  renderToDom("#footer", footer);
-};
+// import { renderToDom } from "/utils/renderOnDOm.js";
 
 //variable to house repo data objects
 const reposArr = [];
@@ -21,7 +14,6 @@ function renderSearchInput() {
     </div>
   </div>`;
 }
-renderSearchInput();
 
 //render repo form to DOM
 function renderRepoForm() {
@@ -123,10 +115,14 @@ const removeRepo = (event) => {
   }
 };
 
-//event listeners section
-document.querySelector("#repoSubmitBtn").addEventListener("click", addRepo);
-document.querySelector("#searchInput").addEventListener("keyup", search);
-document.querySelector("#repoCards").addEventListener("click", removeRepo);
+const start = () => {
+  renderSearchInput();
+  renderRepoForm();
 
-// showNavs();
-renderRepoForm();
+  //event listeners section
+  document.querySelector("#repoSubmitBtn").addEventListener("click", addRepo);
+  document.querySelector("#searchInput").addEventListener("keyup", search);
+  document.querySelector("#repoCards").addEventListener("click", removeRepo);
+};
+
+start();
