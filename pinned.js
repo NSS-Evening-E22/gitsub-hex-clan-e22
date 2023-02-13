@@ -1,3 +1,5 @@
+import { renderToDom } from "/utils/renderOnDOm.js";
+
 const pinned = [
   {
     name: "gatsby-workshop",
@@ -38,6 +40,7 @@ const cardsOnDom = (array) => {
       </div>
     </div>`;
   }
+
   renderToDom("#cards", domString);
 };
 
@@ -65,10 +68,11 @@ const createPinned = (event) => {
 };
 
 const createBtn = document.querySelector("#createBtn");
+
 createBtn.addEventListener("click", createPinned);
 
-const startApp = () => {
+const startPinned = () => {
   cardsOnDom(pinned);
 };
 
-startApp();
+startPinned();
