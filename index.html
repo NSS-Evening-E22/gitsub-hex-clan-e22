@@ -20,10 +20,28 @@
         <div id="profile" class="card-profile" style="width: 18rem"></div>
         <div class="contentWrapper">
           <nav id="navBar" class="navbar navbar-dark"></nav>
-          <div id="cards"></div>
-          <div id="formDiv"></div>
-          <div id="package"></div>
-        </div>
+          <p id="pinned-text">Pinned</p>
+          <div id="cards" class="d-flex flex-wrap gap-3">
+          </div>
+
+          <div id="formDiv">
+            <p class="font-24 marginTop-20">Create a new pinned</p>
+            <p class="borderBottom gray">Coordinate, track, and update your work in one place, so pinned projects stay transparent and on schedule.</p>
+            <label for="projectBoardNametxt" class="form-label">Pinned Project board name</label>
+            <input type="text" id="inputProjectBoardName" placeholder="Example 2" class="form-control" aria-describedby="textHelpBlock">
+            <select class="form-select marginTop-20 bgAndColorChange1" id="language" aria-label="Default select example" required>
+              <option selected>Select code language</option>
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+              <option value="JavaScript">JavaScript</option>
+            </select>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label marginTop-20">Description</label><span class="gray"> (optional)</span>
+              <textarea class="form-control marginTop-10" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <div class="borderBottom"></div>
+              <button type="button" id="createBtn" class="btn btn-success">Create project</button>
+            </div>
+          </div>
         </div>
       </div>
       <footer id="footer" class="align-self-end"></footer>
