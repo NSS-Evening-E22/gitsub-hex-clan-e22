@@ -1,17 +1,52 @@
-.rounded-circle {
-  display: block;
-  width: 300px;
-  height: 300px;
-  border-radius: 90px;
-  padding: 1em;
-}
+
 body {
   background-color: black;
+  color: white;
 }
+
+.card {
+  background-color: black;
+  color: aliceblue;
+  border: solid 1px gray;
+}
+
+#package {
+  display: flex;
+  flex: wrap;
+  flex-wrap: wrap;
+}
+
 .wrapper {
   width: 80%;
   margin: 0 auto;
 }
+
+svg {
+  color: white;
+}
+#projectCards img {
+  width: 350px;
+  height: 200px;
+  opacity: 0.5;
+}
+#projectCards p {
+  padding: 2em;
+}
+#projectCards button {
+  align-self: end;
+}
+
+/*** Toggle FORM  ***/
+.hideForm {
+  display: none;
+}
+.showForm {
+  display: block;
+}
+#sortButton {
+  padding: 0 0.5em;
+}
+/* Footer */
 footer {
   color: white;
   width: 100%;
@@ -25,6 +60,17 @@ footer li {
 }
 svg {
   color: white;
+}
+
+
+/*profile*/
+
+.rounded-circle {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 90px;
+  padding: 1em;
 }
 
 #profile {
@@ -62,3 +108,4 @@ svg {
   height: 32px;
   border-radius: 22px;
 }
+/*profile*/
