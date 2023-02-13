@@ -1,6 +1,32 @@
 import { renderToDom } from "/utils/renderOnDOm.js";
 const projectSubmit = document.querySelector("#projectSubmit");
-const projectList = [];
+const projectList = [
+  {
+    id: 1,
+    name: "D Project",
+    content: "D Project stuff",
+  },
+  {
+    id: 2,
+    name: "B Project",
+    content: "B Project stuff",
+  },
+  {
+    id: 3,
+    name: "C Project",
+    content: "C Project stuff",
+  },
+  {
+    id: 4,
+    name: "A Project",
+    content: "Project A stuff",
+  },
+  {
+    id: 5,
+    name: "E Project",
+    content: "Project stuff",
+  },
+];
 
 // ### FORM SUBMIT
 projectSubmit.addEventListener("click", (e) => {
@@ -62,7 +88,6 @@ const getFromLocalStorage = () => {
   if (localStorage.length > 0) {
     for (let i = 0; i < localStorage.length; i++) {
       let savedItem = JSON.parse(localStorage.getItem(localStorage.key(i)));
-      console.log(savedItem);
       projectList.push(savedItem);
     }
     createTableEntry(projectList);
@@ -72,10 +97,18 @@ const getFromLocalStorage = () => {
 //  ### Allow sorting of project list
 const sorting = () => {
   const sortName = document.querySelector("#sortName");
+  const sortDescription = document.querySelector("#sortDescription");
 
   sortName.addEventListener("click", () => {
     projectList.sort((a, b) =>
       a.name > b.name ? 1 : a.name === b.name ? 1 : -1
+    );
+    createTableEntry(projectList);
+  });
+
+  sortDescription.addEventListener("click", () => {
+    projectList.sort((a, b) =>
+      a.content.toLocaleLowerCase() > b.content.toLocaleLowerCase() ? 1 : -1
     );
     createTableEntry(projectList);
   });
@@ -89,5 +122,10 @@ newProjectButton.addEventListener("click", () => {
   toggleShow.classList.toggle("showForm");
 });
 
-sorting();
-getFromLocalStorage();
+const startup = () => {
+  createTableEntry(projectList);
+  sorting();
+  getFromLocalStorage();
+};
+
+startup();
