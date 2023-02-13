@@ -14,7 +14,10 @@ body {
 #pinned-text {
   font-size: 18px;
 }
-
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
 .card {
   display: flex;
   flex-flow: row wrap;
@@ -140,17 +143,19 @@ a {
   border: solid 1px gray;
 }
 
+.packagesHead {
+  margin: 1.5em;
+}
 #package {
   display: flex;
-  flex: wrap;
+  /* flex: wrap; */
   flex-wrap: wrap;
+  width: 100%;
+  padding: 2em;
 }
-
-.wrapper {
-  width: 80%;
-  margin: 0 auto;
+#formDiv {
+  margin: 1.5em;
 }
-
 svg {
   color: white;
 }

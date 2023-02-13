@@ -3,15 +3,15 @@ const profiles = [
     id: 1,
     image:
       "https://5b0988e595225.cdn.sohucs.com/q_70,c_zoom,w_640/images/20190107/3ab4498199c9408ea7fcd856e383f72e.jpeg",
-    name: "Monica Powell",
-    nickName: "MOnia",
+    name: "Elon Musk",
+    nickName: "Musky",
     describe:
-      "ome quick example text to build on the card title and make up the bulk of the cards.",
+      "Some quick example text to build on the card title and make up </br> the bulk of the cards.",
     followers: "1.8k",
     following: "27",
-    location: "New York, New York",
-    email: "github@aboutmonica.com",
-    website: "http://127.0.0.1:5500/index.html",
+    location: " New York, New York",
+    email: " github@aboutmonica.com",
+    website: " http://127.0.0.1:5500/index.html",
     socials: [
       {
         smName: "Twitter",
@@ -57,17 +57,17 @@ const profiles = [
       "ome quick example text to build on the card title and make up the bulk of the cards.",
     followers: "2.7k",
     following: "270",
-    location: "New York,",
-    email: "github@aboutmonica.com",
-    website: "http://127.0.0.1:5500/index.html11",
+    location: " New York,",
+    email: " github@aboutmonica.com",
+    website: " http://127.0.0.1:5500/index.html11",
     socials: [
       {
-        smName: "Twitter",
+        smName: " Twitter",
         url: "https://twitter.com",
       },
       {
-        smName: "LinkedIn",
-        url: "https://linkedin.com",
+        smName: " LinkedIn",
+        url: " https://linkedin.com",
       },
     ],
     organizations: "icons",
@@ -202,7 +202,7 @@ const renderUserCard = (userInfo) => {
       >
     </li>
     <li>
-      <i class="profile-list-info1"></i><span>${userInfo.socials}</span>
+      <i class="profile-list-info1"></i><span>${userInfo.socials[0].smName} ${userInfo.socials[1].smName}</span>
     
     </li>
   </ul>
@@ -222,8 +222,8 @@ const renderUserCard = (userInfo) => {
         >
           <path
             d="M8.5.75a.75.75 0 0 0-1.5 0v5.19L4.391 3.33a.75.75 0 1 0-1.06 1.061L5.939 7H.75a.75.75 0 0 0 0 1.5h5.19l-2.61 2.609a.75.75 0 1 0 1.061 1.06L7 9.561v5.189a.75.75 0 0 0 1.5 0V9.56l2.609 2.61a.75.75 0 1 0 1.06-1.061L9.561 8.5h5.189a.75.75 0 0 0 0-1.5H9.56l2.61-2.609a.75.75 0 0 0-1.061-1.06L8.5 5.939V.75Z"
-          ></path></svg
-        >Arctic code Vault Contributor</span
+          ></path></svg>
+        Arctic code Vault Contributor</span
       >
     </li>
     <li>
@@ -239,7 +239,7 @@ const renderUserCard = (userInfo) => {
           <path
             d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"
           ></path></svg>
-        >Github Star</span
+        Github Star</span
       >
     </li>
     <li>
